@@ -2,36 +2,28 @@
 
 ## Identity & Context
 
-<!-- PERSONALIZE: Update these fields with your information. Run /personalize to do this interactively. -->
-
-**Owner**: [YOUR NAME], [YOUR ROLE] at [YOUR COMPANY]
-**Focus areas**: [YOUR PRODUCT AREAS - e.g., "Core Platform, API strategy, customer onboarding"]
+**Owner**: Michael Kandler-Schöllhammer, Senior PM / Group PM at Dynatrace
+**Focus areas**: Ready-made dashboards, Problem journey, alerting, root cause analysis, Dynatrace intelligence
 **Vault purpose**: Personal PM workspace - private, never referenced externally
 
 **Language**: English
-<!-- If you work in multiple languages, specify rules here. Example:
-- English: Work content, meetings, decisions, communications
-- [Other language]: Personal reflections, emotional content
-- NEVER mix languages within a note
--->
 
 ---
 
 ## Company Context
 
-<!-- PERSONALIZE: Replace with your company and product context. This helps Claude understand your domain. -->
+**What Dynatrace does**: Dynatrace is an enterprise observability platform that provides AI-powered monitoring, analytics, and automation for cloud-native environments.
 
-**What [YOUR COMPANY] does**: [Brief description of what your company does - 1-2 sentences]
-
-**Target customers**: [Who your customers are - e.g., "Enterprise SaaS companies", "SMB retailers"]
+**Target customers**: Large enterprises and mid-market companies running complex cloud infrastructures
 
 **Core products**:
-- **[Product 1]**: [Brief description]
-- **[Product 2]**: [Brief description]
+- **Dashboards app**: Ready-made and custom dashboards for observability data visualization
+- **Hub app**: Marketplace for Dynatrace extensions, integrations, and content
+- **Problems app**: AI-powered problem detection, root cause analysis, and alerting
 
 **Target users**:
-- **[User type 1]**: [Brief description]
-- **[User type 2]**: [Brief description]
+- **SREs**: Site reliability engineers managing production systems and incident response
+- **Developers**: Software engineers monitoring application performance and debugging issues
 
 ---
 
@@ -43,7 +35,7 @@
 You have access to MCP servers configured in your Claude Code environment:
 
 ### GitHub MCP
-<!-- Not configured. Run /personalize to set up. -->
+<!-- Not yet configured. Run: claude mcp add github --transport streamable-http --url https://api.githubcopilot.com/mcp then restart Claude Code and run /personalize again. -->
 
 <!-- OPTIONAL MCPs - uncomment and configure if you use these:
 
@@ -88,6 +80,8 @@ You have access to MCP servers configured in your Claude Code environment:
 │   ├── slides/            # Exported slide images and decks
 │   ├── diagrams/          # Architecture diagrams and flowcharts
 │   └── other/             # Any other media assets
+├── Weeks/                 # Weekly planning notes (YYYY/YYYY-WNN.md)
+│   └── 2026/
 ├── Archive/
 │   ├── Meetings Archive/  # Raw meeting files before processing
 │   └── Notes Archive/     # Raw inbox files before processing
@@ -105,6 +99,7 @@ You have access to MCP servers configured in your Claude Code environment:
 | Type | Format | Example | Location |
 |------|--------|---------|----------|
 | Daily note | `YYYY-MM-DD.md` | `2026-02-14.md` | `journals/2026/02-February/` |
+| Weekly note | `YYYY-WNN.md` | `2026-W25.md` | `Weeks/2026/` |
 | Work note | `YYYY-MM-DD - Title.md` | `2026-02-14 - Decision - API scope.md` | `Loose Notes/Work/` |
 | Meeting note | `YYYY-MM-DD - Meeting description.md` | `2026-02-14 - Customer sync.md` | `Meetings/2026/02-February/` |
 | Inbox file | anything | `2026-02-14 - braindump.md` | `Inbox/` |
@@ -121,7 +116,7 @@ You have access to MCP servers configured in your Claude Code environment:
 
 **Priority levels**: P1 (critical, max 1) → P2 (high, max 2) → P3 (medium) → P4 (low) → P5 (optional)
 
-**Task fields**: id (auto), status, priority, owner (default: [YOUR NAME]), deadline, source (wikilink), type (task/goal), created date, changelog
+**Task fields**: id (auto), status, priority, owner (default: Michael Kandler-Schöllhammer), deadline, source (wikilink), type (task/goal), created date, changelog
 
 **Dashboard** (`Dashboard/Tasks.md`): Auto-generated view of active tasks with checkboxes. Check a box in Obsidian to mark done — next task-aware skill run syncs the change.
 
@@ -129,6 +124,7 @@ You have access to MCP servers configured in your Claude Code environment:
 
 ### Tags
 - `DailyNote` - Daily journal entries
+- `WeeklyNote` - Weekly planning notes in `Weeks/`
 - `LooseNotes` - General notes
 - `MeetingNotes` - Meeting records
 - `Idea` - Idea files in `Ideas/`
@@ -150,11 +146,8 @@ You have access to MCP servers configured in your Claude Code environment:
 
 **Reference**: `Dashboard/people-profiles.md` for communication preferences and working styles of key stakeholders.
 
-<!-- PERSONALIZE: Adjust these audience types to match your organization -->
-
 **Communication tone guidance**:
 - **Leadership**: Strategic, metrics-driven, concise, aligned with company goals
-- **Customers**: Professional, benefits-focused, clear ROI, no internal jargon
 
 **Slack markdown formatting**:
 - **Bold**: Use `*text*` (single asterisk), NOT `**text**`
@@ -176,6 +169,7 @@ You have access to MCP servers configured in your Claude Code environment:
 | Skill | Command | When to use | MCPs used |
 |-------|---------|-------------|----------|
 | **Plan Today** | `/today` | Morning planning, mid-day updates, or end-of-day close | - |
+| **Plan Week** | `/week` | Monday planning (set weekly goals), Friday wrap-up (report + carry-forward), mid-week status check | - |
 | **Process Meeting** | `/meeting` | Process raw meeting notes into structured notes | - |
 | **Process Inbox** | `/process-inbox` | Route unstructured Inbox files into the right place | - |
 | **Make Decision** | `/decision` | When making product decisions | GitHub, - |
@@ -203,6 +197,7 @@ You have access to MCP servers configured in your Claude Code environment:
 | File | Purpose |
 |------|---------|
 | `Dashboard/Tasks.md` | Generated active task dashboard with checkboxes |
+| `Dashboard/Weekly.md` | Generated current-week goals and progress dashboard |
 | `Dashboard/people-profiles.md` | Stakeholder communication profiles and working styles |
 | `Tasks/_counter.md` | Auto-increment counter for task IDs |
 

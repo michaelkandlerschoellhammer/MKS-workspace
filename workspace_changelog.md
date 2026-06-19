@@ -4,6 +4,31 @@ All structural changes to this workspace are logged here — new folders, new sk
 
 ---
 
+## 2026-06-19 — Added weekly goals and reporting
+
+### Created
+- `templates/weekly-note.md` — Weekly note template with goals, focus tasks table, daily note links, and Friday wrap-up sections
+- `.claude/skills/week/SKILL.md` — `/week` skill: Monday planning (set 3–5 weekly goals linked to tasks), Friday wrap-up (goals met, shipped, carry-forward), mid-week status check, generates `Dashboard/Weekly.md`
+
+### Updated
+- `CLAUDE.md` — Added `Weeks/` folder to vault structure, `YYYY-WNN.md` naming convention, `WeeklyNote` tag, `/week` skill to skills table, `Dashboard/Weekly.md` to key files table
+- `workspace_changelog.md` — This entry
+
+### Storage convention
+- Weekly notes: `Weeks/YYYY/YYYY-WNN.md` (ISO week numbers, zero-padded)
+- Generated dashboard: `Dashboard/Weekly.md`
+
+---
+
+## 2026-06-19 — Workspace personalized via /personalize
+
+### Updated
+
+- `CLAUDE.md` — replaced all placeholder fields with Michael Kandler-Schöllhammer's identity, role (Senior PM / Group PM), company (Dynatrace), product areas (Dashboards, Hub, Problems apps), target users (SREs, developers), and communication audience (Leadership only). Added GitHub MCP setup reminder. Removed Customer audience from communication tone guidance.
+- `Dashboard/people-profiles.md` — replaced example profiles with 5 real stakeholder profiles: Galina Dvoretskaya (manager), Florian Ortner (CPO), Thomas Ziegelbecker (Principal PM Dashboards), David Bründl (Senior PM Alerting), Jürgen Wimmer (Senior PM Usage Insights).
+
+---
+
 ## 2026-03-14 — Remove self-care and yesterday evening from daily flow
 
 ### Updated
